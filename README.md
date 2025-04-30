@@ -91,7 +91,7 @@ Este comando moverá el código de ejemplo a la carpeta **app-example** y dejar�
 - [Tutorial Aprende Expo](https://docs.expo.dev/tutorial/introduction/)
 - [Guía de desarrollo con Firebase en Expo](https://docs.expo.dev/guides/using-firebase/)
 - [Comunidades de Expo](https://chat.expo.dev/)
-
+cambiemos
 ---
 
 ## 👥 Contribuye o aprende más
