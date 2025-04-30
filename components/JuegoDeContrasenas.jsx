@@ -55,14 +55,17 @@ export default function JuegoDeContrasenas({ onFinish, onCompletar }) {
 
     const finalizarJuego = () => {
         setJuegoTerminado(true);
+        clearInterval(timerRef.current);
+      
         const total = contrasenas.filter((c) => esContrasenaValida(c)).length;
         setAciertos(total);
         setMostrarAlerta(true);
-    };
+      };
+      
     const continuarJuego = () => {
         setMostrarAlerta(false);
         if (aciertos === 4) {
-            onCompletar?.(contrasenas[1]); // ✅ Pasar a verificar, con la contraseña 2
+            onCompletar?.(contrasenas[1]); // Pasar a verificar, con la contraseña 2
         } else {
             router.replace("/home");
         }

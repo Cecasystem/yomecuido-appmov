@@ -100,7 +100,7 @@ Este comando moverá el código de ejemplo a la carpeta **app-example** y dejar�
 - [Únete al Discord oficial de Expo](https://chat.expo.dev)
 
 
-### 📱 Recomendación para ejecutar la app desde un dispositivo móvils
+### 📱 Recomendación para ejecutar la app desde un dispositivo móvil
 
 Para probar la aplicación directamente en tu celular, sigue estos pasos:
 

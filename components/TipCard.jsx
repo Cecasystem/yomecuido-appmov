@@ -1,79 +1,55 @@
 import React from "react";
-import { View, Text, Image, StyleSheet, Pressable } from "react-native";
-import Animated, { FadeInUp, useAnimatedStyle, useSharedValue, withSpring } from "react-native-reanimated";
-import colors from "../theme/colors";
+import { View, Text, Image, StyleSheet } from "react-native";
+import Animated, { FadeInUp } from "react-native-reanimated";
 import fonts from "../theme/fonts";
+import colors from "../theme/colors";
 
-export default function TipCard({ title, image, description }) {
-  const scale = useSharedValue(1);
-
-  const animatedCardStyle = useAnimatedStyle(() => ({
-    transform: [{ scale: scale.value }],
-  }));
-
+export default function TipCard({ title, image, description, delay = 0 }) {
   return (
     <Animated.View
-      entering={FadeInUp.duration(600).delay(100)}
-      style={[styles.card, animatedCardStyle]}
+      entering={FadeInUp.duration(500).delay(delay)}
+      style={styles.wrapper}
     >
-      <Pressable
-        onPressIn={() => {
-          scale.value = withSpring(0.97); // efecto al presionar
-        }}
-        onPressOut={() => {
-          scale.value = withSpring(1);
-        }}
-        style={{ alignItems: "center" }}
-      >
-        <Text style={[styles.subtitle, fonts().subtitle]}>{title}</Text>
-
-        <View style={styles.imageContainer}>
-          <Image source={image} style={styles.image} resizeMode="cover" />
-        </View>
-
+      <View style={styles.card}>
+        <Text style={[styles.title, fonts().subtitle]}>{title}</Text>
+        <Image source={image} style={styles.image} resizeMode="contain" />
         <Text style={[styles.description, fonts().text]}>{description}</Text>
-      </Pressable>
+      </View>
     </Animated.View>
   );
 }
 
 const styles = StyleSheet.create({
+  wrapper: {
+    width: "100%",
+    marginBottom: 20,
+  },
   card: {
-    backgroundColor: "rgba(0, 0, 0, 0.28)",
+    backgroundColor: "rgba(255,255,255,0.07)",
     padding: 20,
     borderRadius: 20,
-    marginBottom: 20,
+    alignItems: "center",
     shadowColor: "#000",
     shadowOffset: { width: 0, height: 6 },
     shadowOpacity: 0.15,
     shadowRadius: 10,
     elevation: 8,
   },
-  subtitle: {
+  title: {
     color: colors.light.text,
     fontSize: 20,
     marginBottom: 10,
     textAlign: "center",
-    letterSpacing: 1,
   },
-  imageContainer: {
+  image: {
     width: 170,
     height: 120,
     borderRadius: 20,
-    overflow: "hidden",
-    borderWidth: 2,
-    borderColor: "white",
     marginBottom: 10,
   },
-  image: {
-    width: "100%",
-    height: "100%",
-  },
   description: {
-    textAlign: "justify",
     color: colors.light.text,
-    paddingHorizontal: 5,
-    lineHeight: 22,
-    marginTop: 5,
+    textAlign: "justify",
+    lineHeight: 20,
   },
 });
