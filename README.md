@@ -36,7 +36,7 @@ npm install -g expo-cli
 - La aplicación ya está configurada para utilizar un proyecto de Firebase con las credenciales necesarias.
 - No necesitas realizar configuraciones adicionales si usas el repositorio oficial.
 
-El proyecto de Firebase está registrado con el siguiente usuario de prueba:
+El proyecto de Firebase está registrado con el siguiente usuario de prueba para usar en la aplicacion en la pantalla de login:
 
 - **Correo:** `sistemas2.cecasem@gmail.com`
 - **Contraseña:** `sistemas123`
