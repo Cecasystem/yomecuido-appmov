@@ -54,8 +54,29 @@ const dataNivelVideo = {
       ],
       respuestaCorrecta: "MiPerroEs123!",
       reflexion: "Recuerda: una contraseña segura debe tener letras, números, símbolos y no ser una secuencia fácil de adivinar.",
+    },
+    {
+      enunciado: "¿Qué deberías hacer si alguien más conoce tu contraseña?",
+      opciones: [
+        "Ignorarlo, no es grave",
+        "Cambiarla inmediatamente",
+        "Decírselo a todos tus amigos",
+        "Seguir usándola igual"
+      ],
+      respuestaCorrecta: "Cambiarla inmediatamente",
+      reflexion: "Si alguien más conoce tu contraseña, cámbiala de inmediato para proteger tu cuenta."
+    },
+    {
+      enunciado: "¿Es recomendable usar la misma contraseña en todas tus cuentas?",
+      opciones: [
+        "Sí, así es más fácil recordarla",
+        "No, porque si alguien la descubre, accede a todo",
+        "Sí, si es una contraseña larga",
+        "Solo si es para redes sociales"
+      ],
+      respuestaCorrecta: "No, porque si alguien la descubre, accede a todo",
+      reflexion: "Usar contraseñas diferentes para cada cuenta evita que todas tus cuentas estén en riesgo si una se ve comprometida."
     }
-    
   ],
   retroalimentacion: [
     {
@@ -72,6 +93,12 @@ const dataNivelVideo = {
     },
     {
       correcto: "¡Excelente! Elegiste una contraseña que combina letras, números y símbolos, haciéndola más difícil de adivinar."
+    },
+    {
+      correcto: "¡Muy bien! Cambiar tu contraseña de inmediato es la mejor medida de seguridad."
+    },
+    {
+      correcto: "¡Correcto! No uses la misma contraseña para todo, diversifica para proteger tus datos."
     }
   ]
 };

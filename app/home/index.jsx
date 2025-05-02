@@ -180,7 +180,7 @@ export default function HomeScreen() {
               number={6}
               position={{ top: "65%", left: "60%" }}
               icon={require("../../assets/images/map_icons/game2.png")}
-              estado={mapaProgress.nivel2}
+              estado={mapaProgress.nivel2} // este es el nivel6.jsx
             />
             <GamePoint
               number={7}

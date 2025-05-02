@@ -50,9 +50,9 @@ export default function useAuth() {
     if (!username || username.length < 5) {
       newErrors.username =
         "El nombre de usuario debe tener al menos 5 caracteres.";
-    } else if (/\s/.test(username)) {
-      newErrors.username = "El nombre de usuario no debe contener espacios.";
-    } else if (username.length > 20) {
+      } else if (!/^[a-zA-Z0-9_]+$/.test(username)) {
+        newErrors.username = "Solo se permiten letras, números y guión bajo. No se permiten espacios ni símbolos.";
+      } else if (username.length > 20) {
       newErrors.username =
         "El nombre de usuario no debe pasar los 20 caracteres";
     }
